@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MultiLevelModel modelName="Portaview">
+        <MetaClass name="User" level="1" isAbstract="false"/>
+        <MetaClass name="AbstractVideo" level="1" isAbstract="true"/>
+        <MetaClass name="Playlist" level="1" isAbstract="false"/>
+        <MetaClass name="Video" level="1" isAbstract="false"/>
+        <MetaClass name="Short" level="1" isAbstract="false"/>
+        <MetaClass name="Subscription" level="1" isAbstract="false"/>
+		
+		<!-- "of" must refer to name of a class or another instance. 
+		
+		In either case, the level of an instance must be exactly one below the level of 
+		the referenced class/instance level -->
+        
+		<Instance name="subscription1" ofClass="Subscription" isAbstract="false" level="0" />
+        <Instance name="user2" ofClass="User" isAbstract="false" level="0"/>
+        <Instance name="user1" ofClass="User"  isAbstract="false" level="0"/>
+		
+		<!-- 
+		Pure Generalization is an intra-level relationship, regular Generalization 
+		(as part of intrinsic classification) may also be between levels)		
+		-->
+		<PureGeneralization child="Short" parent="AbstractVideo"/>
+        <PureGeneralization child="Video" parent="AbstractVideo"/>
+		
+        <Enumeration name="videoGenre">
+			<EnumerationValue>Music</EnumerationValue>
+			<EnumerationValue>Sport</EnumerationValue>
+			<EnumerationValue>Travel</EnumerationValue>
+		</Enumeration>
+        <Enumeration name="batterySize">
+			<EnumerationValue>AA</EnumerationValue>
+			<EnumerationValue>AAA</EnumerationValue>
+		</Enumeration>
+		
+		<!--
+		"type" of an attribute must be either Boolean, Integer, String, Float, Date or 
+		refer to a custom type, i.e., an enumeration name (or a class/instance name where 
+		the level > 0, but I think we can ignore this)
+		-->
+        <Attribute class="AbstractVideo" instantiationLevel="0" name="genre" type="videoGenre"/>
+        <Attribute class="AbstractVideo" instantiationLevel="0" name="title" type="String"/>
+        <Attribute class="AbstractVideo" instantiationLevel="0" name="uploadedOn" type="Date"/>
+
+ 
+		<!--
+		Date should be entered as Date(YYYY, MM, DD)
+		Enum values as ENUM_NAME::ENUM_VALUE
+		-->
+		<SlotValue class="subscription1" attributeName="subscriptionStart" value="Date(2024, 12, 12)"/>
+        <SlotValue class="user1" attributeName="showRealName" value="true"/>
+        <SlotValue class="user1" attributeName="lastName" value="Steve"/>
+
+		<!-- 
+		-1 as multiplicity indicates that the maximum value is unbounded (*). 
+		Note that the maximum value must in all other cases be greater than the min value
+		and the min value must be at least 0.
+		-->
+        <Association source="Playlist" target="Video" name="contains" 
+		instantiationLevelSource="0" instantiationLevelTarget="0" 
+		minMultiplicitySourceToTarget="0" maxMultiplicitySourceToTarget="-1" 
+		minMultiplicityTargetToSource="0" maxMultiplicityTargetToSource="-1"/>
+        <Association source="User" target="Abstract" name="uploads"
+		instantiationLevelSource="1" instantiationLevelTarget="2"
+		minMultiplicitySourceToTarget="1" maxMultiplicitySourceToTarget="5"
+		minMultiplicityTargetToSource="1" maxMultiplicityTargetToSource="2"/>
+               
+		<Link source="subscription1" target="user1" name="subscribedUser"/>
+        <Link source="user1" target="user2" name="likes"/>
+        
+ </MultiLevelModel>

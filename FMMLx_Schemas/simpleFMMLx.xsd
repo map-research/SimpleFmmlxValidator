@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  	<xs:simpleType name="basicDataType" final="restriction" >
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Boolean" />
+			<xs:enumeration value="Integer" />
+			<xs:enumeration value="Float" />
+			<xs:enumeration value="String" />
+			<xs:enumeration value="Date" />			
+		</xs:restriction>
+	</xs:simpleType>
+	<!--@VICKY: Trotz der Aufzählung von Basic-Datentypen, wird bei Attribut der Datentpy NICHT hierauf beschränkt
+	(Jeder string-Wert wird akzeptiert). Andernfalls könnten keine Nutzer-Enums als Datentyp akzeptiert werden.
+	-->
+							
+  
+	<xs:element name="MultiLevelModel">
+		<xs:complexType>
+			<xs:sequence>
+					
+					<!-- CLASS -->
+					<xs:element name="MetaClass" minOccurs="0" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:attribute name="name" type="xs:string" use="required"/>
+							<xs:attribute name="level" type="xs:positiveInteger" use="required"/>
+							<xs:attribute name="isAbstract" type="xs:boolean" use="required"/>
+							<!--@VICKY: Nur bei Class ist Level positiveInteger, da diese immer min. auf Level 1 sein müssen -->
+
+						</xs:complexType>
+					</xs:element>
+			
+					<!-- INSTANCES -->
+					<xs:element name="Instance" minOccurs="0" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:attribute name="name" type="xs:string" use="required"/>
+							<xs:attribute name="ofClass" type="xs:string" use="required"/>
+							<xs:attribute name="isAbstract" type="xs:boolean" use="required"/>
+							<xs:attribute name="level" type="xs:nonNegativeInteger" use="required"/>
+						</xs:complexType>
+					</xs:element>
+					
+					<!-- PURE GENERALIZATION -->
+					<xs:element name="PureGeneralization" minOccurs="0" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:attribute name="child" type="xs:string" use="required"/>
+							<xs:attribute name="parent" type="xs:string" use="required"/>
+						</xs:complexType>
+					</xs:element>
+					
+					<!-- ENUMERATIONS -->
+					<xs:element name="Enumeration" minOccurs="0" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="EnumerationValue" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+							<xs:attribute name="name" type="xs:string" use="required"/>
+						</xs:complexType>
+					</xs:element>
+					
+					<!-- ATTRIBUTES -->
+					<xs:element name="Attribute" minOccurs="0" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:attribute name="class" type="xs:string" use="required"/>
+							<xs:attribute name="instantiationLevel" type="xs:nonNegativeInteger" use="required"/>
+							<xs:attribute name="name" type="xs:string" use="required"/>
+							<xs:attribute name="type" type="xs:string" use="required"/>
+						</xs:complexType>
+					</xs:element>
+					
+					<!-- SLOTS -->
+					<xs:element name="SlotValue" minOccurs="0" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:attribute name="class" type="xs:string" use="required"/>
+							<xs:attribute name="attributeName" type="xs:string" use="required"/>
+							<xs:attribute name="value" type="xs:string" use="required"/>
+						</xs:complexType>
+					</xs:element>
+					
+					<!-- ASSOCIATION -->
+					<xs:element name="Association" minOccurs="0" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:attribute name="source" type="xs:string" use="required"/>
+							<xs:attribute name="target" type="xs:string" use="required"/>
+							<xs:attribute name="associationName" type="xs:string" use="required"/>
+							<xs:attribute name="accessSourceFromTargetName" type="xs:string" use="required"/>
+							<xs:attribute name="accessTargetFromSourceName" type="xs:string" use="required"/>
+							<xs:attribute name="instantiationLevelSource" type="xs:nonNegativeInteger" use="required"/>
+							<xs:attribute name="instantiationLevelTarget" type="xs:nonNegativeInteger" use="required"/>
+							<xs:attribute name="minMultiplicitySourceToTarget" type="xs:nonNegativeInteger" use="required"/>
+							<xs:attribute name="maxMultiplicitySourceToTarget" type="xs:integer" use="required"/>
+							<xs:attribute name="minMultiplicityTargetToSource" type="xs:nonNegativeInteger" use="required"/>
+							<xs:attribute name="maxMultiplicityTargetToSource" type="xs:integer" use="required"/>
+						</xs:complexType>
+					</xs:element>
+					
+					<!-- LINK -->
+					<xs:element name="Link" minOccurs="0" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:attribute name="source" type="xs:string" use="required"/>
+							<xs:attribute name="target" type="xs:string" use="required"/>
+							<xs:attribute name="accessName" type="xs:string" use="required"/>
+						</xs:complexType>
+					</xs:element>
+			
+			</xs:sequence>		
+		    <xs:attribute name="modelName" type="xs:string" use="required" />
+		</xs:complexType>
+		
+	</xs:element>
+
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</xs:schema>
+  
+ 

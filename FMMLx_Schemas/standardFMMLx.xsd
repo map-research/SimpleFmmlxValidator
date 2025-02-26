@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="XModelerPackage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Imports" />
+        
+<xs:element name="Model">
+          <xs:complexType>
+            <xs:sequence>
+              
+			  <!-- META CLASS -->
+			  <xs:element minOccurs="0" maxOccurs="unbounded" name="addMetaClass">
+                <xs:complexType>
+                  <xs:attribute name="abstract" type="xs:boolean" use="required" />
+				  <xs:attribute name="isControlClass" type="xs:boolean" use="required" />
+                  <xs:attribute name="level" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="maxLevel" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="package" type="xs:string" use="required" />
+                  <xs:attribute name="singleton" type="xs:boolean" use="required" />
+                </xs:complexType>
+              </xs:element>
+			  
+			  <!-- INSTANCES -->
+			  <xs:element minOccurs="0" maxOccurs="unbounded" name="addInstance">
+                <xs:complexType>
+                  <xs:attribute name="abstract" type="xs:boolean" use="required" />
+				  <xs:attribute name="isControlClass" type="xs:boolean" use="optional" />
+                  <xs:attribute name="level" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="maxLevel" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="name" type="xs:string" use="required" />
+				  <xs:attribute name="of" type="xs:string" use="required" />
+                  <xs:attribute name="package" type="xs:string" use="required" />
+                  <xs:attribute name="singleton" type="xs:boolean" use="required" />
+                </xs:complexType>
+              </xs:element>
+			  
+			  <!-- PURE GENERALIZATIONS -->
+			  <xs:element minOccurs="0" maxOccurs="unbounded" name="changeParent">
+                <xs:complexType>
+                  <xs:attribute name="class" type="xs:string" use="required" />
+                  <xs:attribute name="new" type="xs:string" use="required" />
+                  <xs:attribute name="old" type="xs:string" use="required" />
+                  <xs:attribute name="package" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+			  
+			  <!-- ENUMERATIONS -->
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="addEnumeration">
+                <xs:complexType>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+			  
+			  <xs:element minOccurs="0" maxOccurs="unbounded" name="addEnumerationValue">
+                <xs:complexType>
+                  <xs:attribute name="enum_name" type="xs:string" use="required" />
+				  <xs:attribute name="enum_value_name" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+			  
+			  <!-- ATTRIBUTES -->
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="addAttribute">
+                <xs:complexType>
+                  <xs:attribute name="class" type="xs:string" use="required" />
+                  <xs:attribute name="level" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="multiplicity" type="xs:string" use="required" />
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="package" type="xs:string" use="required" />
+                  <xs:attribute name="type" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+			  
+			  <!-- OPERATIONS -->
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="addOperation">
+                <xs:complexType>
+                  <xs:attribute name="body" type="xs:string" use="required" />
+				  <xs:attribute name="class" type="xs:string" use="required"/>
+                  <xs:attribute name="level" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="monitored" type="xs:boolean" use="required" />
+                  <xs:attribute name="name" type="xs:string" use="required" />
+				  <xs:attribute name="package" type="xs:string" use="required" />
+                  <xs:attribute name="paramNames" type="xs:string" use="required" />
+				  <xs:attribute name="paramTypes" type="xs:string" use="required"/>
+                  <xs:attribute name="type" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+
+              <!-- Constraints -->
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="addConstraint">
+                <xs:complexType>
+                  <xs:attribute name="body" type="xs:string" use="required" />
+				  <xs:attribute name="class" type="xs:string" use="required"/>
+                  <xs:attribute name="constName" type="xs:string" use="required" />
+                  <xs:attribute name="instLevel" type="xs:unsignedByte" use="required" />
+				  <xs:attribute name="package" type="xs:string" use="required" />
+                  <xs:attribute name="reason" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+			  
+			  <!-- SLOTS -->
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="changeSlotValue">
+                <xs:complexType>
+				  <xs:attribute name="class" type="xs:string" use="required"/>
+                  <xs:attribute name="package" type="xs:string" use="required" />
+                  <xs:attribute name="slotName" type="xs:string" use="required" />
+                  <xs:attribute name="valueToBeParsed" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+			  
+			  <!-- ASSOCIATIONS -->
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="addAssociation">
+                <xs:complexType>
+                  <xs:attribute name="accessSourceFromTargetName" type="xs:string" use="required" />
+                  <xs:attribute name="accessTargetFromSourceName" type="xs:string" use="required" />
+                  <xs:attribute name="associationType" type="xs:string" use="required" />
+                  <xs:attribute name="classSource" type="xs:string" use="required" />
+                  <xs:attribute name="classTarget" type="xs:string" use="required" />
+                  <xs:attribute name="fwName" type="xs:string" use="required" />
+                  <xs:attribute name="instLevelSource" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="instLevelTarget" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="multSourceToTarget" type="xs:string" use="required" />
+                  <xs:attribute name="multTargetToSource" type="xs:string" use="required" />
+                  <xs:attribute name="package" type="xs:string" use="required" />
+                  <xs:attribute name="reverseName" type="xs:byte" use="required" />
+                  <xs:attribute name="sourceVisibleFromTarget" type="xs:boolean" use="required" />
+                  <xs:attribute name="targetVisibleFromSource" type="xs:boolean" use="required" />
+                </xs:complexType>
+              </xs:element>
+			  
+			  <!-- LINKS -->
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="addLink">
+                <xs:complexType>
+                  <xs:attribute name="classSource" type="xs:string" use="required" />
+                  <xs:attribute name="classTarget" type="xs:string" use="required" />
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="package" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+			  
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Diagrams" minOccurs="0" maxOccurs="1">
+        <!-- NO TYPE CHECKING FOR DIAGRAMS 
+		<xs:complexType>
+            <xs:sequence>
+              <xs:element name="Diagram">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Instances">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="Instance">
+                            <xs:complexType>
+                              <xs:attribute name="hidden" type="xs:boolean" use="required" />
+                              <xs:attribute name="path" type="xs:string" use="required" />
+                              <xs:attribute name="xCoordinate" type="xs:unsignedShort" use="required" />
+                              <xs:attribute name="yCoordinate" type="xs:short" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Edges">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="Edge">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="IntermediatePoints">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element maxOccurs="unbounded" name="IntermediatePoint">
+                                        <xs:complexType>
+                                          <xs:attribute name="xCoordinate" type="xs:decimal" use="required" />
+                                          <xs:attribute name="yCoordinate" type="xs:decimal" use="required" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Labels">
+                                  <xs:complexType>
+                                    <xs:sequence minOccurs="0">
+                                      <xs:element name="Label">
+                                        <xs:complexType>
+                                          <xs:attribute name="localID" type="xs:unsignedByte" use="required" />
+                                          <xs:attribute name="ownerID" type="xs:string" use="required" />
+                                          <xs:attribute name="xCoordinate" type="xs:decimal" use="required" />
+                                          <xs:attribute name="yCoordinate" type="xs:decimal" use="required" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="path" type="xs:string" use="required" />
+                              <xs:attribute name="sourcePort" type="xs:string" use="required" />
+                              <xs:attribute name="targetPort" type="xs:string" use="required" />
+                              <xs:attribute name="type" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="DiagramDisplayProperties">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SLOTS" type="xs:boolean" />
+                          <xs:element name="CONCRETESYNTAX" type="xs:boolean" />
+                          <xs:element name="METACLASSNAME" type="xs:boolean" />
+                          <xs:element name="ISSUETABLE" type="xs:boolean" />
+                          <xs:element name="OPERATIONS" type="xs:boolean" />
+                          <xs:element name="DERIVEDATTRIBUTES" type="xs:boolean" />
+                          <xs:element name="CONSTRAINTS" type="xs:boolean" />
+                          <xs:element name="CONSTRAINTREPORTS" type="xs:boolean" />
+                          <xs:element name="DERIVEDOPERATIONS" type="xs:boolean" />
+                          <xs:element name="OPERATIONVALUES" type="xs:boolean" />
+                          <xs:element name="GETTERSANDSETTERS" type="xs:boolean" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Notes">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="Note">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="NoteId" type="xs:unsignedByte" />
+                                <xs:element name="NoteColor" type="xs:string" />
+                                <xs:element name="NoteContent" type="xs:string" />
+                                <xs:element name="NotePosition">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="XPosition" type="xs:decimal" />
+                                      <xs:element name="YPosition" type="xs:decimal" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Views">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="View">
+                            <xs:complexType>
+                              <xs:attribute name="name" type="xs:string" use="required" />
+                              <xs:attribute name="tx" type="xs:decimal" use="required" />
+                              <xs:attribute name="ty" type="xs:decimal" use="required" />
+                              <xs:attribute name="xx" type="xs:decimal" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="umlMode" type="xs:boolean" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+		  -->
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="path" type="xs:string" use="required" />
+      <xs:attribute name="version" type="xs:unsignedByte" use="required" />
+      <xs:attribute name="xModelerVersion" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+ 
+</xs:schema>

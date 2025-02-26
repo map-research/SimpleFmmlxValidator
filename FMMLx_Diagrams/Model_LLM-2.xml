@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XModelerPackage path="Root::Healthcare" version="4">
+    <Imports/>
+    <Model name="Root::Healthcare">
+        <!-- Metaclasses (Level 2) -->
+        <addMetaClass abstract="true" level="2" maxLevel="2" name="HealthcareEntity" package="Root::Healthcare" singleton="false"/>
+        <addMetaClass abstract="true" level="2" maxLevel="2" name="MedicalService" package="Root::Healthcare" singleton="false"/>
+
+        <!-- Concrete Classes (Level 1) -->
+        <addMetaClass abstract="false" level="1" maxLevel="1" name="Patient" package="Root::Healthcare" singleton="false"/>
+        <addMetaClass abstract="false" level="1" maxLevel="1" name="Doctor" package="Root::Healthcare" singleton="false"/>
+        <addMetaClass abstract="false" level="1" maxLevel="1" name="Treatment" package="Root::Healthcare" singleton="false"/>
+        <addMetaClass abstract="false" level="1" maxLevel="1" name="Medication" package="Root::Healthcare" singleton="false"/>
+        <addMetaClass abstract="false" level="1" maxLevel="1" name="Appointment" package="Root::Healthcare" singleton="false"/>
+
+        <!-- Parent-Child Relationships -->
+        <changeParent class="Root::Healthcare::Patient" new="Root::Healthcare::HealthcareEntity" old="" package="Root::Healthcare"/>
+        <changeParent class="Root::Healthcare::Doctor" new="Root::Healthcare::HealthcareEntity" old="" package="Root::Healthcare"/>
+        <changeParent class="Root::Healthcare::Treatment" new="Root::Healthcare::MedicalService" old="" package="Root::Healthcare"/>
+        <changeParent class="Root::Healthcare::Medication" new="Root::Healthcare::MedicalService" old="" package="Root::Healthcare"/>
+
+        <!-- Attributes (Level 1) -->
+        <addAttribute class="Root::Healthcare::HealthcareEntity" level="1" multiplicity="Seq{1,1,true,false}" name="id" package="Root::Healthcare" type="Root::XCore::String"/>
+        <addAttribute class="Root::Healthcare::Patient" level="1" multiplicity="Seq{1,1,true,false}" name="patientName" package="Root::Healthcare" type="Root::XCore::String"/>
+        <addAttribute class="Root::Healthcare::Doctor" level="1" multiplicity="Seq{1,1,true,false}" name="specialization" package="Root::Healthcare" type="Root::XCore::String"/>
+        <addAttribute class="Root::Healthcare::Treatment" level="1" multiplicity="Seq{1,1,true,false}" name="treatmentType" package="Root::Healthcare" type="Root::XCore::String"/>
+        <addAttribute class="Root::Healthcare::Medication" level="1" multiplicity="Seq{1,1,true,false}" name="dosage" package="Root::Healthcare" type="Root::XCore::String"/>
+        <addAttribute class="Root::Healthcare::Appointment" level="1" multiplicity="Seq{1,1,true,false}" name="appointmentDate" package="Root::Healthcare" type="Root::Auxiliary::Date"/>
+
+        <!-- Attributes (Level 0, Instance-specific attributes) -->
+        <addAttribute class="Root::Healthcare::Patient" level="0" multiplicity="Seq{1,1,true,false}" name="dateOfBirth" package="Root::Healthcare" type="Root::Auxiliary::Date"/>
+        <addAttribute class="Root::Healthcare::Doctor" level="0" multiplicity="Seq{1,1,true,false}" name="licenseNumber" package="Root::Healthcare" type="Root::XCore::String"/>
+        <addAttribute class="Root::Healthcare::Treatment" level="0" multiplicity="Seq{1,1,true,false}" name="treatmentDuration" package="Root::Healthcare" type="Root::XCore::Integer"/>
+
+        <!-- Associations -->
+        <addAssociation accessSourceFromTargetName="patient" accessTargetFromSourceName="appointments" classSource="Root::Healthcare::Patient" classTarget="Root::Healthcare::Appointment" fwName="hasAppointment" instLevelSource="0" instLevelTarget="0" multSourceToTarget="Seq{0,-1,false,false}" multTargetToSource="Seq{1,1,true,false}" package="Root::Healthcare" reverseName="-1" sourceVisibleFromTarget="true" targetVisibleFromSource="true"/>
+        <addAssociation accessSourceFromTargetName="doctor" accessTargetFromSourceName="appointments" classSource="Root::Healthcare::Doctor" classTarget="Root::Healthcare::Appointment" fwName="conductsAppointment" instLevelSource="0" instLevelTarget="0" multSourceToTarget="Seq{0,-1,false,false}" multTargetToSource="Seq{1,1,true,false}" package="Root::Healthcare" reverseName="-1" sourceVisibleFromTarget="true" targetVisibleFromSource="true"/>
+    </Model>
+
+    <!-- Diagram Elements (placeholder) -->
+    <Diagrams>
+        <Diagram name="HealthcareModel">
+            <Instances>
+                <Instance hidden="false" path="Root::Healthcare::HealthcareEntity" xCoordinate="-150" yCoordinate="-100"/>
+                <Instance hidden="false" path="Root::Healthcare::MedicalService" xCoordinate="350" yCoordinate="-100"/>
+                <Instance hidden="false" path="Root::Healthcare::Patient" xCoordinate="-300" yCoordinate="50"/>
+                <Instance hidden="false" path="Root::Healthcare::Doctor" xCoordinate="-50" yCoordinate="50"/>
+                <Instance hidden="false" path="Root::Healthcare::Treatment" xCoordinate="200" yCoordinate="50"/>
+                <Instance hidden="false" path="Root::Healthcare::Medication" xCoordinate="450" yCoordinate="50"/>
+                <Instance hidden="false" path="Root::Healthcare::Appointment" xCoordinate="100" yCoordinate="200"/>
+            </Instances>
+            <Edges/>
+            <DiagramDisplayProperties>
+                <SLOTS>true</SLOTS>
+                <CONCRETESYNTAX>true</CONCRETESYNTAX>
+                <METACLASSNAME>true</METACLASSNAME>
+            </DiagramDisplayProperties>
+        </Diagram>
+    </Diagrams>
+</XModelerPackage>

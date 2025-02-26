@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XModelerPackage path="Root::FlightManagementMLM" version="4" xModelerVersion="">
+    <Imports/>
+    <Model name="Root::FlightManagementMLM">
+        <addMetaClass abstract="false" isControlClass="false" level="3" maxLevel="3" name="Airplane" package="Root::FlightManagementMLM" singleton="false"/>
+        <addMetaClass abstract="false" isControlClass="false" level="2" maxLevel="2" name="Passenger" package="Root::FlightManagementMLM" singleton="false"/>
+        <addMetaClass abstract="false" isControlClass="false" level="2" maxLevel="2" name="FlightConnection" package="Root::FlightManagementMLM" singleton="false"/>
+        <addMetaClass abstract="false" isControlClass="false" level="1" maxLevel="1" name="Airport" package="Root::FlightManagementMLM" singleton="false"/>
+        <addEnumeration name="nationalityEnum"/>
+        <addAttribute class="Root::FlightManagementMLM::Airplane" level="0" multiplicity="Seq{1,1,true,false}" name="airplaneID" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::Airplane" level="1" multiplicity="Seq{1,1,true,false}" name="capacity" package="Root::FlightManagementMLM" type="Root::XCore::Integer"/>
+        <addAttribute class="Root::FlightManagementMLM::Airplane" level="1" multiplicity="Seq{1,1,true,false}" name="crewCapacity" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::Airplane" level="1" multiplicity="Seq{1,1,true,false}" name="model" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::Airplane" level="2" multiplicity="Seq{1,1,true,false}" name="manufacturer" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::Airport" level="0" multiplicity="Seq{1,1,true,false}" name="city" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::Airport" level="0" multiplicity="Seq{1,1,true,false}" name="country" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::Airport" level="0" multiplicity="Seq{1,1,true,false}" name="iataCode" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::Airport" level="0" multiplicity="Seq{1,1,true,false}" name="numberRunways" package="Root::FlightManagementMLM" type="Root::XCore::Integer"/>
+        <addAttribute class="Root::FlightManagementMLM::FlightConnection" level="0" multiplicity="Seq{1,1,true,false}" name="baseCost" package="Root::FlightManagementMLM" type="Root::XCore::Float"/>
+        <addAttribute class="Root::FlightManagementMLM::FlightConnection" level="0" multiplicity="Seq{1,1,true,false}" name="dateOfFlight" package="Root::FlightManagementMLM" type="Root::Auxiliary::Date"/>
+        <addAttribute class="Root::FlightManagementMLM::FlightConnection" level="0" multiplicity="Seq{1,1,true,false}" name="durationOfFlightInHours" package="Root::FlightManagementMLM" type="Root::XCore::Float"/>
+        <addAttribute class="Root::FlightManagementMLM::FlightConnection" level="0" multiplicity="Seq{1,1,true,false}" name="pilot" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::FlightConnection" level="0" multiplicity="Seq{1,1,true,false}" name="startGate" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::FlightConnection" level="0" multiplicity="Seq{1,1,true,false}" name="startTimeOfFlight" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::FlightConnection" level="1" multiplicity="Seq{1,1,true,false}" name="connectionID" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::FlightConnection" level="1" multiplicity="Seq{1,1,true,false}" name="tax" package="Root::FlightManagementMLM" type="Root::XCore::Float"/>
+        <addAttribute class="Root::FlightManagementMLM::Passenger" level="0" multiplicity="Seq{1,1,true,false}" name="isWindowSeat" package="Root::FlightManagementMLM" type="Root::XCore::Boolean"/>
+        <addAttribute class="Root::FlightManagementMLM::Passenger" level="0" multiplicity="Seq{1,1,true,false}" name="paymentMethod" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::Passenger" level="0" multiplicity="Seq{1,1,true,false}" name="seat" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::Passenger" level="0" multiplicity="Seq{1,1,true,false}" name="ticketID" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::Passenger" level="0" multiplicity="Seq{1,1,true,false}" name="ticketType" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::Passenger" level="0" multiplicity="Seq{1,1,true,false}" name="totalCost" package="Root::FlightManagementMLM" type="Root::XCore::Float"/>
+        <addAttribute class="Root::FlightManagementMLM::Passenger" level="1" multiplicity="Seq{1,1,true,false}" name="dateOfBirth" package="Root::FlightManagementMLM" type="Root::Auxiliary::Date"/>
+        <addAttribute class="Root::FlightManagementMLM::Passenger" level="1" multiplicity="Seq{1,1,true,false}" name="firstName" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::Passenger" level="1" multiplicity="Seq{1,1,true,false}" name="lastName" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAttribute class="Root::FlightManagementMLM::Passenger" level="1" multiplicity="Seq{1,1,true,false}" name="nationality" package="Root::FlightManagementMLM" type="Root::FlightManagementMLM::nationalityEnum"/>
+        <addAttribute class="Root::FlightManagementMLM::Passenger" level="1" multiplicity="Seq{1,1,true,false}" name="passportNumber" package="Root::FlightManagementMLM" type="Root::XCore::String"/>
+        <addAssociation accessSourceFromTargetName="flightConnection" accessTargetFromSourceName="airplane" associationType="Root::Associations::DefaultAssociation" classSource="Root::FlightManagementMLM::FlightConnection" classTarget="Root::FlightManagementMLM::Airplane" fwName="isFlownBy" instLevelSource="0" instLevelTarget="0" multSourceToTarget="Seq{1,1,true,false}" multTargetToSource="Seq{0,-1,false,false}" package="Root::FlightManagementMLM" reverseName="-1" sourceVisibleFromTarget="false" targetVisibleFromSource="true"/>
+        <addAssociation accessSourceFromTargetName="flightConnection" accessTargetFromSourceName="airport" associationType="Root::Associations::DefaultAssociation" classSource="Root::FlightManagementMLM::FlightConnection" classTarget="Root::FlightManagementMLM::Airport" fwName="departuresAt" instLevelSource="1" instLevelTarget="0" multSourceToTarget="Seq{1,1,true,false}" multTargetToSource="Seq{0,-1,false,false}" package="Root::FlightManagementMLM" reverseName="-1" sourceVisibleFromTarget="false" targetVisibleFromSource="true"/>
+        <addAssociation accessSourceFromTargetName="landingFlightConnection" accessTargetFromSourceName="landingAirport" associationType="Root::Associations::DefaultAssociation" classSource="Root::FlightManagementMLM::FlightConnection" classTarget="Root::FlightManagementMLM::Airport" fwName="landsAt" instLevelSource="1" instLevelTarget="0" multSourceToTarget="Seq{1,1,true,false}" multTargetToSource="Seq{0,-1,false,false}" package="Root::FlightManagementMLM" reverseName="-1" sourceVisibleFromTarget="false" targetVisibleFromSource="true"/>
+        <addAssociation accessSourceFromTargetName="passenger" accessTargetFromSourceName="flightConnection" associationType="Root::Associations::DefaultAssociation" classSource="Root::FlightManagementMLM::Passenger" classTarget="Root::FlightManagementMLM::FlightConnection" fwName="isFor" instLevelSource="0" instLevelTarget="0" multSourceToTarget="Seq{1,1,true,false}" multTargetToSource="Seq{0,-1,false,false}" package="Root::FlightManagementMLM" reverseName="-1" sourceVisibleFromTarget="false" targetVisibleFromSource="true"/>
+    </Model>
+    <Diagrams>
+        <Diagram name="FlightManagementMLM" umlMode="false">
+            <Instances>
+                <Instance hidden="false" path="Root::FlightManagementMLM::Airport" xCoordinate="60" yCoordinate="107"/>
+                <Instance hidden="false" path="Root::FlightManagementMLM::FlightConnection" xCoordinate="609" yCoordinate="161"/>
+                <Instance hidden="false" path="Root::FlightManagementMLM::Airplane" xCoordinate="915" yCoordinate="475"/>
+                <Instance hidden="true" path="Root::FlightManagementMLM::nationalityEnum" xCoordinate="0" yCoordinate="0"/>
+                <Instance hidden="false" path="Root::FlightManagementMLM::Passenger" xCoordinate="439" yCoordinate="-350"/>
+            </Instances>
+            <Edges>
+                <Edge path="AssociationMapping: Root::FlightManagementMLM::Passenger::flightConnection" sourcePort="EAST" targetPort="NORTH" type="Association">
+                    <IntermediatePoints>
+                        <IntermediatePoint xCoordinate="756.2704" yCoordinate="-274.6151"/>
+                        <IntermediatePoint xCoordinate="756.2704" yCoordinate="131.0"/>
+                        <IntermediatePoint xCoordinate="756.0449" yCoordinate="131.0"/>
+                    </IntermediatePoints>
+                    <Labels/>
+                </Edge>
+                <Edge path="AssociationMapping: Root::FlightManagementMLM::FlightConnection::airport" sourcePort="NORTH" targetPort="NORTH" type="Association">
+                    <IntermediatePoints>
+                        <IntermediatePoint xCoordinate="719.2837" yCoordinate="52.490063"/>
+                        <IntermediatePoint xCoordinate="150.34256" yCoordinate="52.490063"/>
+                    </IntermediatePoints>
+                    <Labels>
+                        <Label localID="0" ownerID="AssociationMapping: Root::FlightManagementMLM::FlightConnection::airport" xCoordinate="-90.678246" yCoordinate="-104.45495"/>
+                    </Labels>
+                </Edge>
+                <Edge path="AssociationMapping: Root::FlightManagementMLM::FlightConnection::landingAirport" sourcePort="WEST" targetPort="EAST" type="Association">
+                    <IntermediatePoints>
+                        <IntermediatePoint xCoordinate="369.28882" yCoordinate="269.10547"/>
+                        <IntermediatePoint xCoordinate="369.28882" yCoordinate="129.25633"/>
+                    </IntermediatePoints>
+                    <Labels>
+                        <Label localID="0" ownerID="AssociationMapping: Root::FlightManagementMLM::FlightConnection::landingAirport" xCoordinate="-7.2700515" yCoordinate="-192.9618"/>
+                    </Labels>
+                </Edge>
+            </Edges>
+            <DiagramDisplayProperties>
+                <SLOTS>true</SLOTS>
+                <CONCRETESYNTAX>true</CONCRETESYNTAX>
+                <METACLASSNAME>false</METACLASSNAME>
+                <ISSUETABLE>false</ISSUETABLE>
+                <OPERATIONS>true</OPERATIONS>
+                <DERIVEDATTRIBUTES>true</DERIVEDATTRIBUTES>
+                <CONSTRAINTS>true</CONSTRAINTS>
+                <CONSTRAINTREPORTS>true</CONSTRAINTREPORTS>
+                <DERIVEDOPERATIONS>true</DERIVEDOPERATIONS>
+                <OPERATIONVALUES>true</OPERATIONVALUES>
+                <GETTERSANDSETTERS>true</GETTERSANDSETTERS>
+            </DiagramDisplayProperties>
+            <Notes>
+                <Note>
+                    <NoteId>0</NoteId>
+                    <NoteColor>0xf9ec72ff</NoteColor>
+                    <NoteContent>FlightConnection aufgrund von Indikator Multiplizät ein Level nach oben gepullt, inkl. ALLER eigenen Properties. Properties von Flight bleibem auf dem gleichen Level, werden aber bereits in FlightConnection deklariert. Der Klassenname der Klasse die hochgezogen wird, wird übernommen, der andere Name "Flight" geht verloren.</NoteContent>
+                    <NotePosition>
+                        <XPosition>835.0</XPosition>
+                        <YPosition>111.0</YPosition>
+                    </NotePosition>
+                </Note>
+                <Note>
+                    <NoteId>1</NoteId>
+                    <NoteColor>0xf9ec72ff</NoteColor>
+                    <NoteContent>Die Slot Values der Original Klasse "Airplane" zeigen einen zweifachen Pull-Up an: AirplaneID sowie der Link isFlownBy scheinen unabhängig von allen anderen Attributen zu sein und somit erst auf Level 0 ermittelbar zu sein. capacity, crewCapacity und model codependen zueinander. Welches der Attribute das Dominante ist, ist nicht ermittelbar. Sie hängen aber alle von manufacturer ab. Da dies eine Mengen Codependence (?) anzeigt, muss es ein weiteres Level hochgepullt werden. Der Klassenname bleibt erhalten.</NoteContent>
+                    <NotePosition>
+                        <XPosition>1111.0</XPosition>
+                        <YPosition>427.0</YPosition>
+                    </NotePosition>
+                </Note>
+                <Note>
+                    <NoteId>2</NoteId>
+                    <NoteColor>0xf9ec72ff</NoteColor>
+                    <NoteContent>Für die Klasse Airport wurde kein Indicator gefunden, welcher einen Pull-Up rechtfertigt.</NoteContent>
+                    <NotePosition>
+                        <XPosition>-195.0</XPosition>
+                        <YPosition>70.0</YPosition>
+                    </NotePosition>
+                </Note>
+                <Note>
+                    <NoteId>3</NoteId>
+                    <NoteColor>0xf9ec72ff</NoteColor>
+                    <NoteContent>Die Klasse Passenger wird nach oben gezogen. Die Begründung und folglich die Vorgehensweise ist simultan zu der Klasse FlightConnection.</NoteContent>
+                    <NotePosition>
+                        <XPosition>173.0</XPosition>
+                        <YPosition>-395.0</YPosition>
+                    </NotePosition>
+                </Note>
+            </Notes>
+            <Views>
+                <View name="Main View" tx="244.65044" ty="357.95615" xx="0.70710677"/>
+            </Views>
+        </Diagram>
+    </Diagrams>
+</XModelerPackage>
