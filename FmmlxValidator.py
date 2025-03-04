@@ -1,7 +1,7 @@
 from easyxsd import *
 #xsd = xsd_from_file("FMMLx_Schemas/standardFMMLx.xsd")
-#xml_f = xml_from_file("FMMLx_Diagrams/Model_LLM-2.xml")
-#xml_t = xml_from_file("FMMLx_Diagrams/standardFMMLx-example1.xml")
+#xml_f = xml_from_file("FMMLx_Example_Diagrams/Model_LLM-2.xml")
+#xml_t = xml_from_file("FMMLx_Example_Diagrams/standardFMMLx-example1.xml")
 
 
 #print(xsd_error_log_as_simple_strings_pretty(validate_with_errors(xml_f, xsd)[1]))
