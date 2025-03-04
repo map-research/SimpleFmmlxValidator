@@ -1,4 +1,4 @@
-from easyxsd import *
+from easyxsd_new import *
 #xsd = xsd_from_file("FMMLx_Schemas/standardFMMLx.xsd")
 #xml_f = xml_from_file("FMMLx_Example_Diagrams/Model_LLM-2.xml")
 #xml_t = xml_from_file("FMMLx_Example_Diagrams/standardFMMLx-example1.xml")
