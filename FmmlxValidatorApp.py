@@ -19,8 +19,8 @@ class FMMLxValidatorApp():
         ctk.set_appearance_mode("light")
         ctk.set_default_color_theme("blue")
 
-        icon_path = os.path.join(os.path.dirname(__file__), "mosaic32.ico")
-        self.root.iconbitmap(icon_path)
+        #icon_path = os.path.join(os.path.dirname(__file__), "mosaic32.ico")
+        #self.root.iconbitmap(icon_path)
 
         width = 720
         height = 400

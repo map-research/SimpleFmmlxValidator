@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<XModelerPackage path="Root::AutomotiveManufacturingSystem" version="4" xModelerVersion="">
+    <Imports/>
+    <Model name="Root::AutomotiveManufacturingSystem">
+        <addMetaClass abstract="false" isControlClass="false" level="3" maxLevel="3" name="VehicleComponent" package="Root::AutomotiveManufacturingSystem" singleton="false"/>
+        <addInstance abstract="false" isControlClass="false" level="2" maxLevel="2" name="Engine" of="Root::AutomotiveManufacturingSystem::VehicleComponent" package="Root::AutomotiveManufacturingSystem" singleton="false"/>
+        <addInstance abstract="false" isControlClass="false" level="2" maxLevel="2" name="Body" of="Root::AutomotiveManufacturingSystem::VehicleComponent" package="Root::AutomotiveManufacturingSystem" singleton="false"/>
+        <addInstance abstract="false" isControlClass="false" level="1" maxLevel="1" name="ElectricEngine" of="Root::AutomotiveManufacturingSystem::Engine" package="Root::AutomotiveManufacturingSystem" singleton="false"/>
+        <addInstance abstract="false" isControlClass="false" level="1" maxLevel="1" name="Chassis" of="Root::AutomotiveManufacturingSystem::Body" package="Root::AutomotiveManufacturingSystem" singleton="false"/>
+        <addInstance abstract="false" isControlClass="false" level="0" maxLevel="0" name="TeslaMotor" of="Root::AutomotiveManufacturingSystem::ElectricEngine" package="Root::AutomotiveManufacturingSystem" singleton="false"/>
+        <addInstance abstract="false" isControlClass="false" level="0" maxLevel="0" name="SteelChassis" of="Root::AutomotiveManufacturingSystem::Chassis" package="Root::AutomotiveManufacturingSystem" singleton="false"/>
+        <addEnumeration name="FuelType"/>
+        <addEnumerationValue enum_name="FuelType" enum_value_name="Electric"/>
+        <addEnumerationValue enum_name="FuelType" enum_value_name="Gasoline"/>
+        <addEnumerationValue enum_name="FuelType" enum_value_name="Diesel"/>
+        <addAttribute class="Root::AutomotiveManufacturingSystem::VehicleComponent" level="2" multiplicity="Seq{1,1,true,false}" name="weight" package="Root::AutomotiveManufacturingSystem" type="Root::XCore::Float"/>
+        <addAttribute class="Root::AutomotiveManufacturingSystem::Engine" level="1" multiplicity="Seq{1,1,true,false}" name="powerOutput" package="Root::AutomotiveManufacturingSystem" type="Root::XCore::Integer"/>
+        <addAttribute class="Root::AutomotiveManufacturingSystem::ElectricEngine" level="0" multiplicity="Seq{1,1,true,false}" name="batteryCapacity" package="Root::AutomotiveManufacturingSystem" type="Root::XCore::Float"/>
+        <addAttribute class="Root::AutomotiveManufacturingSystem::Chassis" level="0" multiplicity="Seq{1,1,true,false}" name="material" package="Root::AutomotiveManufacturingSystem" type="Root::XCore::String"/>
+        <changeSlotValue class="Root::AutomotiveManufacturingSystem::TeslaMotor" package="Root::AutomotiveManufacturingSystem" slotName="batteryCapacity" valueToBeParsed="85.0"/>
+        <changeSlotValue class="Root::AutomotiveManufacturingSystem::SteelChassis" package="Root::AutomotiveManufacturingSystem" slotName="material" valueToBeParsed="[83,116,101,101,108].asString()"/>
+        <addAssociation accessSourceFromTargetName="engine" accessTargetFromSourceName="chassis" associationType="Root::Associations::DefaultAssociation" classSource="Root::AutomotiveManufacturingSystem::ElectricEngine" classTarget="Root::AutomotiveManufacturingSystem::Chassis" fwName="mountedOn" instLevelSource="0" instLevelTarget="0" multSourceToTarget="Seq{1,1,true,false}" multTargetToSource="Seq{1,1,true,false}" package="Root::AutomotiveManufacturingSystem" reverseName="-1" sourceVisibleFromTarget="true" targetVisibleFromSource="true"/>
+        <addLink classSource="Root::AutomotiveManufacturingSystem::TeslaMotor" classTarget="Root::AutomotiveManufacturingSystem::SteelChassis" name="installedIn" package="Root::AutomotiveManufacturingSystem"/>
+    </Model>
+</XModelerPackage>

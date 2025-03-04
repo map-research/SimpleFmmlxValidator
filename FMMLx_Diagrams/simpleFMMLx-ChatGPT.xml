@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<MultiLevelModel modelName="AutomotiveManufacturingSystem">
+    <MetaClass name="VehicleComponent" level="3" isAbstract="true"/>
+    <Instance name="Engine" ofClass="VehicleComponent" level="2" isAbstract="false"/>
+    <Instance name="Body" ofClass="VehicleComponent" level="2" isAbstract="false"/>
+    <Instance name="ElectricEngine" ofClass="Engine" level="1" isAbstract="false"/>
+    <Instance name="Chassis" ofClass="Body" level="1" isAbstract="false"/>
+    <Instance name="TeslaMotor" ofClass="ElectricEngine" level="0" isAbstract="false"/>
+    <Instance name="SteelChassis" ofClass="Chassis" level="0" isAbstract="false"/>
+    <PureGeneralization child="ElectricEngine" parent="Engine"/>
+    <PureGeneralization child="Chassis" parent="Body"/>
+    <Enumeration name="FuelType">
+        <EnumerationValue>Electric</EnumerationValue>
+        <EnumerationValue>Gasoline</EnumerationValue>
+        <EnumerationValue>Diesel</EnumerationValue>
+    </Enumeration><Attribute class="VehicleComponent" instantiationLevel="2" name="weight" type="Float"/>
+    <Attribute class="Engine" instantiationLevel="1" name="powerOutput" type="Integer"/>
+    <Attribute class="ElectricEngine" instantiationLevel="0" name="batteryCapacity" type="Float"/>
+    <Attribute class="Chassis" instantiationLevel="0" name="material" type="String"/>
+    <SlotValue class="TeslaMotor" attributeName="batteryCapacity" value="85.0"/>
+    <SlotValue class="SteelChassis" attributeName="material" value="Steel"/>
+    <Association source="ElectricEngine" target="Chassis" associationName="mountedOn" accessSourceFromTargetName="engine" accessTargetFromSourceName="chassis" instantiationLevelSource="0" instantiationLevelTarget="0" minMultiplicitySourceToTarget="1" maxMultiplicitySourceToTarget="1" minMultiplicityTargetToSource="1" maxMultiplicityTargetToSource="1"/>
+    <Link source="TeslaMotor" target="SteelChassis" accessName="installedIn"/>
+</MultiLevelModel>
