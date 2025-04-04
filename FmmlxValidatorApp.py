@@ -6,7 +6,7 @@ from tkinter import filedialog, messagebox
 import shutil
 import os
 
-from FmmlxValidator import easyFmmlxValidator
+from FmmlxValidator import EasyFmmlxValidator
 from SimpleFmmlxTransformer import SimpleFmmlxTransformer
 from StandardFmmlxTransformer import StandardFmmlxTransformer
 
@@ -116,7 +116,8 @@ class FMMLxValidatorApp():
             self.btn_copy.configure(state="normal", fg_color="#203864")
 
     def _get_validation_message(self) -> str:
-        validator = easyFmmlxValidator(self.is_standard, self.file_path)
+        validator = EasyFmmlxValidator(self.is_standard, self.file_path)
+        validator.perform_all_integrity_checks() # only shown in console
         return (f"The multi-level model is {validator.get_is_valid_message()} \n"
                 f"{validator.get_error_messages()}")
 

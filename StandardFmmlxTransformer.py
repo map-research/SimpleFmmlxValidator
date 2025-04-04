@@ -78,7 +78,7 @@ class StandardFmmlxTransformer:
             attr = doc.createElement("addAttribute")
             attr.setAttribute("class", f"{self.package}::{cls}")
             attr.setAttribute("level", level)
-            attr.setAttribute("multiplicity", "Seq{1,1,true,false}")
+            attr.setAttribute("multiplicity", "Seq{0,1,true,false}")
             attr.setAttribute("name", name)
             attr.setAttribute("package", self.package)
             attr.setAttribute("type", self._get_complete_type(raw_type))
