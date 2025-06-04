@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XModelerPackage path="Root::DDL" version="4" xModelerVersion="2.3.3">
+    <Imports/>
+    <Model name="Root::DDL">
+        <addMetaClass abstract="false" isControlClass="false" level="1" maxLevel="1" name="CiPerName" package="Root::DDL" singleton="false"/>
+        <addMetaClass abstract="false" isControlClass="false" level="1" maxLevel="1" name="CiPerId" package="Root::DDL" singleton="false"/>
+        <addMetaClass abstract="false" isControlClass="false" level="1" maxLevel="1" name="CiPer" package="Root::DDL" singleton="false"/>
+        <addMetaClass abstract="false" isControlClass="false" level="1" maxLevel="1" name="C1PerContdet" package="Root::DDL" singleton="false"/>
+        <addMetaClass abstract="false" isControlClass="false" level="1" maxLevel="1" name="C1CommRteType" package="Root::DDL" singleton="false"/>
+        <addMetaClass abstract="false" isControlClass="false" level="1" maxLevel="1" name="CiSpType" package="Root::DDL" singleton="false"/>
+        <addMetaClass abstract="false" isControlClass="false" level="1" maxLevel="1" name="CiSp" package="Root::DDL" singleton="false"/>
+        <addAttribute class="Root::DDL::C1CommRteType" level="0" multiplicity="Seq{1,1,true,false}" name="alwDndFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1CommRteType" level="0" multiplicity="Seq{1,1,true,false}" name="alwPctStatusFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1CommRteType" level="0" multiplicity="Seq{1,1,true,false}" name="boDataArea" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1CommRteType" level="0" multiplicity="Seq{1,1,true,false}" name="busObjCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1CommRteType" level="0" multiplicity="Seq{1,1,true,false}" name="cndVerifStatusFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1CommRteType" level="0" multiplicity="Seq{1,1,true,false}" name="commRteMethFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1CommRteType" level="0" multiplicity="Seq{1,1,true,false}" name="commRteTypeCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1CommRteType" level="0" multiplicity="Seq{1,1,true,false}" name="fmtAlgCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1CommRteType" level="0" multiplicity="Seq{1,1,true,false}" name="version" package="Root::DDL" type="Root::XCore::Integer"/>
+        <addAttribute class="Root::DDL::C1PerContdet" level="0" multiplicity="Seq{1,1,true,false}" name="c1ContactId" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1PerContdet" level="0" multiplicity="Seq{1,1,true,false}" name="cndActinactFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1PerContdet" level="0" multiplicity="Seq{1,1,true,false}" name="cndPrimaryFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1PerContdet" level="0" multiplicity="Seq{1,1,true,false}" name="cndVerifStatusFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1PerContdet" level="0" multiplicity="Seq{1,1,true,false}" name="commRteTypeCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1PerContdet" level="0" multiplicity="Seq{1,1,true,false}" name="contactExtId" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1PerContdet" level="0" multiplicity="Seq{1,1,true,false}" name="contactName" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1PerContdet" level="0" multiplicity="Seq{1,1,true,false}" name="contactValue" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1PerContdet" level="0" multiplicity="Seq{1,1,true,false}" name="contactValueExt" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1PerContdet" level="0" multiplicity="Seq{1,1,true,false}" name="dndEndTm" package="Root::DDL" type="Root::Auxiliary::Date"/>
+        <addAttribute class="Root::DDL::C1PerContdet" level="0" multiplicity="Seq{1,1,true,false}" name="dndStartTm" package="Root::DDL" type="Root::Auxiliary::Date"/>
+        <addAttribute class="Root::DDL::C1PerContdet" level="0" multiplicity="Seq{1,1,true,false}" name="perId" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::C1PerContdet" level="0" multiplicity="Seq{1,1,true,false}" name="version" package="Root::DDL" type="Root::XCore::Integer"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="address1" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="address2" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="address3" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="address4" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="city" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="country" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="county" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="emailId" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="geoCode" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="houseType" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="inCityLimit" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="languageCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="lsSlDescr" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="lsSlFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="num1" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="num2" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="ovrdMailName1" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="ovrdMailName2" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="ovrdMailName3" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="perDataArea" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="perId" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="perOrBusFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="postal" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="recvMktgInfoFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="state" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="timeZoneCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="version" package="Root::DDL" type="Root::XCore::Integer"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="webPasswAns" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="webPasswd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPer" level="0" multiplicity="Seq{1,1,true,false}" name="webPwdHintFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPerId" level="0" multiplicity="Seq{1,1,true,false}" name="encrPerIdNbr" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPerId" level="0" multiplicity="Seq{1,1,true,false}" name="hashPerIdNbr" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPerId" level="0" multiplicity="Seq{1,1,true,false}" name="idTypeCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPerId" level="0" multiplicity="Seq{1,1,true,false}" name="perId" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPerId" level="0" multiplicity="Seq{1,1,true,false}" name="perIdNbr" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPerId" level="0" multiplicity="Seq{1,1,true,false}" name="primSw" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPerId" level="0" multiplicity="Seq{1,1,true,false}" name="version" package="Root::DDL" type="Root::XCore::Integer"/>
+        <addAttribute class="Root::DDL::CiPerName" level="0" multiplicity="Seq{1,1,true,false}" name="entityName" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPerName" level="0" multiplicity="Seq{1,1,true,false}" name="entityNameUpr" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPerName" level="0" multiplicity="Seq{1,1,true,false}" name="nameTypeFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPerName" level="0" multiplicity="Seq{1,1,true,false}" name="perId" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPerName" level="0" multiplicity="Seq{1,1,true,false}" name="primNameSw" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiPerName" level="0" multiplicity="Seq{1,1,true,false}" name="seqNum" package="Root::DDL" type="Root::XCore::Integer"/>
+        <addAttribute class="Root::DDL::CiPerName" level="0" multiplicity="Seq{1,1,true,false}" name="version" package="Root::DDL" type="Root::XCore::Boolean"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="abolishDt" package="Root::DDL" type="Root::Auxiliary::Date"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="descrLong" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="disconLocCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="facLvl1Cd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="facLvl2Cd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="facLvl3Cd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="installDt" package="Root::DDL" type="Root::Auxiliary::Date"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="keyId" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="keySw" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="mrCycCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="mrCycRteSeq" package="Root::DDL" type="Root::XCore::Integer"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="mrInstrCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="mrInstrDetails" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="mrRteCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="mrWarnCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="mtrLocCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="mtrLocDetails" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="okToEnterSw" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="overPremFldInfoFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="premId" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="spDataArea" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="spId" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="spSrcStatusFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="spStatusFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="spTypeCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSp" level="0" multiplicity="Seq{1,1,true,false}" name="version" package="Root::DDL" type="Root::XCore::Integer"/>
+        <addAttribute class="Root::DDL::CiSpType" level="0" multiplicity="Seq{1,1,true,false}" name="allowMrRouteSw" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSpType" level="0" multiplicity="Seq{1,1,true,false}" name="extServReqFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSpType" level="0" multiplicity="Seq{1,1,true,false}" name="faTypeProfCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSpType" level="0" multiplicity="Seq{1,1,true,false}" name="multRteUsageFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSpType" level="0" multiplicity="Seq{1,1,true,false}" name="spSubtypeFlg" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSpType" level="0" multiplicity="Seq{1,1,true,false}" name="spTypeCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSpType" level="0" multiplicity="Seq{1,1,true,false}" name="startStopGeoType" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSpType" level="0" multiplicity="Seq{1,1,true,false}" name="svcTypeCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSpType" level="0" multiplicity="Seq{1,1,true,false}" name="trendClCd" package="Root::DDL" type="Root::XCore::String"/>
+        <addAttribute class="Root::DDL::CiSpType" level="0" multiplicity="Seq{1,1,true,false}" name="version" package="Root::DDL" type="Root::XCore::Integer"/>
+    </Model>
+    <Diagrams>
+        <Diagram name="source" umlMode="false">
+            <Instances>
+                <Instance hidden="false" path="Root::DDL::C1CommRteType" xCoordinate="530" yCoordinate="273"/>
+                <Instance hidden="false" path="Root::DDL::CiSpType" xCoordinate="322" yCoordinate="271"/>
+                <Instance hidden="false" path="Root::DDL::C1PerContdet" xCoordinate="736" yCoordinate="272"/>
+                <Instance hidden="false" path="Root::DDL::CiPerId" xCoordinate="1139" yCoordinate="273"/>
+                <Instance hidden="false" path="Root::DDL::CiSp" xCoordinate="105" yCoordinate="272"/>
+                <Instance hidden="false" path="Root::DDL::CiPer" xCoordinate="940" yCoordinate="274"/>
+                <Instance hidden="false" path="Root::DDL::CiPerName" xCoordinate="1340" yCoordinate="274"/>
+            </Instances>
+            <Edges/>
+            <DiagramDisplayProperties>
+                <SLOTS>true</SLOTS>
+                <CONCRETESYNTAX>true</CONCRETESYNTAX>
+                <METACLASSNAME>false</METACLASSNAME>
+                <ISSUETABLE>false</ISSUETABLE>
+                <OPERATIONS>true</OPERATIONS>
+                <DERIVEDATTRIBUTES>true</DERIVEDATTRIBUTES>
+                <CONSTRAINTS>true</CONSTRAINTS>
+                <CONSTRAINTREPORTS>true</CONSTRAINTREPORTS>
+                <DERIVEDOPERATIONS>true</DERIVEDOPERATIONS>
+                <OPERATIONVALUES>true</OPERATIONVALUES>
+                <GETTERSANDSETTERS>true</GETTERSANDSETTERS>
+            </DiagramDisplayProperties>
+            <Notes/>
+            <Views>
+                <View name="Main View" tx="13.404615" ty="-184.63095" xx="1.0"/>
+            </Views>
+        </Diagram>
+    </Diagrams>
+</XModelerPackage>

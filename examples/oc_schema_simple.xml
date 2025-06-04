@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<MultiLevelModel modelName="DDL">
+    <MetaClass name="Ci_Per_Name" level="1" isAbstract="false"/>
+    <MetaClass name="Ci_Per_Id" level="1" isAbstract="false"/>
+    <MetaClass name="Ci_Per" level="1" isAbstract="false"/>
+    <MetaClass name="C1_Per_Contdet" level="1" isAbstract="false"/>
+    <MetaClass name="C1_Comm_Rte_Type" level="1" isAbstract="false"/>
+    <MetaClass name="Ci_Sp_Type" level="1" isAbstract="false"/>
+    <MetaClass name="Ci_Sp" level="1" isAbstract="false"/>
+    <Attribute class="C1CommRteType" instantiationLevel="0" name="alwDndFlg" type="String"/>
+    <Attribute class="C1CommRteType" instantiationLevel="0" name="alwPctStatusFlg" type="String"/>
+    <Attribute class="C1CommRteType" instantiationLevel="0" name="boDataArea" type="String"/>
+    <Attribute class="C1CommRteType" instantiationLevel="0" name="busObjCd" type="String"/>
+    <Attribute class="C1CommRteType" instantiationLevel="0" name="cndVerifStatusFlg" type="String"/>
+    <Attribute class="C1CommRteType" instantiationLevel="0" name="commRteMethFlg" type="String"/>
+    <Attribute class="C1CommRteType" instantiationLevel="0" name="commRteTypeCd" type="String"/>
+    <Attribute class="C1CommRteType" instantiationLevel="0" name="fmtAlgCd" type="String"/>
+    <Attribute class="C1CommRteType" instantiationLevel="0" name="version" type="Integer"/>
+    <Attribute class="C1PerContdet" instantiationLevel="0" name="c1ContactId" type="String"/>
+    <Attribute class="C1PerContdet" instantiationLevel="0" name="cndActinactFlg" type="String"/>
+    <Attribute class="C1PerContdet" instantiationLevel="0" name="cndPrimaryFlg" type="String"/>
+    <Attribute class="C1PerContdet" instantiationLevel="0" name="cndVerifStatusFlg" type="String"/>
+    <Attribute class="C1PerContdet" instantiationLevel="0" name="commRteTypeCd" type="String"/>
+    <Attribute class="C1PerContdet" instantiationLevel="0" name="contactExtId" type="String"/>
+    <Attribute class="C1PerContdet" instantiationLevel="0" name="contactName" type="String"/>
+    <Attribute class="C1PerContdet" instantiationLevel="0" name="contactValue" type="String"/>
+    <Attribute class="C1PerContdet" instantiationLevel="0" name="contactValueExt" type="String"/>
+    <Attribute class="C1PerContdet" instantiationLevel="0" name="dndEndTm" type="Date"/>
+    <Attribute class="C1PerContdet" instantiationLevel="0" name="dndStartTm" type="Date"/>
+    <Attribute class="C1PerContdet" instantiationLevel="0" name="perId" type="String"/>
+    <Attribute class="C1PerContdet" instantiationLevel="0" name="version" type="Integer"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="address1" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="address2" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="address3" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="address4" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="city" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="country" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="county" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="emailId" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="geoCode" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="houseType" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="inCityLimit" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="languageCd" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="lsSlDescr" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="lsSlFlg" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="num1" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="num2" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="ovrdMailName1" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="ovrdMailName2" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="ovrdMailName3" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="perDataArea" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="perId" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="perOrBusFlg" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="postal" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="recvMktgInfoFlg" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="state" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="timeZoneCd" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="version" type="Integer"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="webPasswAns" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="webPasswd" type="String"/>
+    <Attribute class="CiPer" instantiationLevel="0" name="webPwdHintFlg" type="String"/>
+    <Attribute class="CiPerId" instantiationLevel="0" name="encrPerIdNbr" type="String"/>
+    <Attribute class="CiPerId" instantiationLevel="0" name="hashPerIdNbr" type="String"/>
+    <Attribute class="CiPerId" instantiationLevel="0" name="idTypeCd" type="String"/>
+    <Attribute class="CiPerId" instantiationLevel="0" name="perId" type="String"/>
+    <Attribute class="CiPerId" instantiationLevel="0" name="perIdNbr" type="String"/>
+    <Attribute class="CiPerId" instantiationLevel="0" name="primSw" type="String"/>
+    <Attribute class="CiPerId" instantiationLevel="0" name="version" type="Integer"/>
+    <Attribute class="CiPerName" instantiationLevel="0" name="entityName" type="String"/>
+    <Attribute class="CiPerName" instantiationLevel="0" name="entityNameUpr" type="String"/>
+    <Attribute class="CiPerName" instantiationLevel="0" name="nameTypeFlg" type="String"/>
+    <Attribute class="CiPerName" instantiationLevel="0" name="perId" type="String"/>
+    <Attribute class="CiPerName" instantiationLevel="0" name="primNameSw" type="String"/>
+    <Attribute class="CiPerName" instantiationLevel="0" name="seqNum" type="Integer"/>
+    <Attribute class="CiPerName" instantiationLevel="0" name="version" type="Boolean"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="abolishDt" type="Date"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="descrLong" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="disconLocCd" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="facLvl1Cd" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="facLvl2Cd" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="facLvl3Cd" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="installDt" type="Date"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="keyId" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="keySw" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="mrCycCd" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="mrCycRteSeq" type="Integer"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="mrInstrCd" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="mrInstrDetails" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="mrRteCd" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="mrWarnCd" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="mtrLocCd" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="mtrLocDetails" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="okToEnterSw" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="overPremFldInfoFlg" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="premId" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="spDataArea" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="spId" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="spSrcStatusFlg" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="spStatusFlg" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="spTypeCd" type="String"/>
+    <Attribute class="CiSp" instantiationLevel="0" name="version" type="Integer"/>
+    <Attribute class="CiSpType" instantiationLevel="0" name="allowMrRouteSw" type="String"/>
+    <Attribute class="CiSpType" instantiationLevel="0" name="extServReqFlg" type="String"/>
+    <Attribute class="CiSpType" instantiationLevel="0" name="faTypeProfCd" type="String"/>
+    <Attribute class="CiSpType" instantiationLevel="0" name="multRteUsageFlg" type="String"/>
+    <Attribute class="CiSpType" instantiationLevel="0" name="spSubtypeFlg" type="String"/>
+    <Attribute class="CiSpType" instantiationLevel="0" name="spTypeCd" type="String"/>
+    <Attribute class="CiSpType" instantiationLevel="0" name="startStopGeoType" type="String"/>
+    <Attribute class="CiSpType" instantiationLevel="0" name="svcTypeCd" type="String"/>
+    <Attribute class="CiSpType" instantiationLevel="0" name="trendClCd" type="String"/>
+    <Attribute class="CiSpType" instantiationLevel="0" name="version" type="Integer"/>
+</MultiLevelModel>

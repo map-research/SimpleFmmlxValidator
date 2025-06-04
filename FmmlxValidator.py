@@ -100,7 +100,7 @@ class EasyFmmlxValidator:
                 #C3: same level
                 #C4: not level 0
                 if level_of_child != level_of_parent:
-                    return_str += (f"The level of the child class <{child_class}> is unequal to the level of its parent class"
+                    return_str += (f"The level of the child class <{child_class}> is unequal to the level of its parent class "
                                    f"<{parent_class}>! Pure generalizations across levels is prohibited!\n")
                 if level_of_child < 1 or level_of_parent < 1:
                     return_str += (f"The level of the child class <{child_class}> or the parent class <{parent_class}> is 0. "
@@ -121,10 +121,9 @@ class EasyFmmlxValidator:
         for abstract_elem in abstract_classes:
             for instance_elem in self.xml_doc.getElementsByTagName("Instance"):
                 if instance_elem.getAttribute("ofClass") == abstract_elem.getAttribute("name"):
-                    return_str += (f"The instance <{instance_elem.getAttribute("name")}> is an instance of the abstract class"
+                    return_str += (f"The instance <{instance_elem.getAttribute("name")}> is an instance of the abstract class "
                                    f"<{abstract_elem.getAttribute("name")}>. Abstract classes must not have any instances!\n")
         return return_str
-
 
 
 
