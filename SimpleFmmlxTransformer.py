@@ -215,9 +215,13 @@ class SimpleFmmlxTransformer:
             value = value.split("::")[2]
             return value
 
-        # CASE 3 : ENUM
         if len(value.split("::")) > 1 and value.split("::")[1] == self.model_name:
-            value = value.split("::")[2] + "::" + value.split("::")[3]
-            return "Enumeration::" + value
+            # CASE 3 : ENUM
+            if len(value.split("::")) == 4:
+                value = value.split("::")[2] + "::" + value.split("::")[3]
+            # Case 4 DS-TYPE
+            else:
+                value = "AbstractDataType::" + value.split("::")[2]
+
 
         return value

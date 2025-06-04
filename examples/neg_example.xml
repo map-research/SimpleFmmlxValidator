@@ -1,0 +1,110 @@
+<MultiLevelModel modelName="ProductsAndClothes">
+
+    <!-- LEVEL 3: Base concepts (non-abstract) -->
+    <MetaClass name="ProductCategory" level="3" isAbstract="false"/>
+    <MetaClass name="GarmentCategory" level="3" isAbstract="false"/>
+
+    <!-- LEVEL 2: Concrete clabjects -->
+    <Instance name="ClothingProduct" ofClass="ProductCategory" level="2" isAbstract="false"/>
+    <Instance name="FootwearProduct" ofClass="ProductCategory" level="2" isAbstract="false"/>
+    <Instance name="Shirt" ofClass="GarmentCategory" level="2" isAbstract="false"/>
+    <Instance name="Pants" ofClass="GarmentCategory" level="2" isAbstract="false"/>
+
+    <!-- LEVEL 1: Product types -->
+    <Instance name="TShirt" ofClass="Shirt" level="1" isAbstract="false"/>
+    <Instance name="Jeans" ofClass="Pants" level="1" isAbstract="false"/>
+    <Instance name="Sneakers" ofClass="FootwearProduct" level="1" isAbstract="false"/>
+
+    <!-- LEVEL 0: Concrete products -->
+    <Instance name="BlueTShirt001" ofClass="TShirt" level="0" isAbstract="false"/>
+    <Instance name="Levis501" ofClass="Jeans" level="0" isAbstract="false"/>
+    <Instance name="NikeAirMax" ofClass="Sneakers" level="0" isAbstract="false"/>
+
+    <!-- PURE GENERALIZATIONS (intra-level, valid) -->
+    <PureGeneralization child="Shirt" parent="ClothingProduct"/>
+    <PureGeneralization child="Pants" parent="ClothingProduct"/>
+
+    <!-- ENUMERATIONS -->
+    <Enumeration name="SizeEnum">
+        <EnumerationValue>XS</EnumerationValue>
+        <EnumerationValue>S</EnumerationValue>
+        <EnumerationValue>M</EnumerationValue>
+        <EnumerationValue>L</EnumerationValue>
+        <EnumerationValue>XL</EnumerationValue>
+    </Enumeration>
+
+    <Enumeration name="ColorEnum">
+        <EnumerationValue>Blue</EnumerationValue>
+        <EnumerationValue>Black</EnumerationValue>
+        <EnumerationValue>White</EnumerationValue>
+        <EnumerationValue>Red</EnumerationValue>
+    </Enumeration>
+
+    <!-- ATTRIBUTES with deep instantiation -->
+    <Attribute class="ProductCategory" instantiationLevel="2" name="hasWarrantyYears" type="Integer"/>
+    <Attribute class="ClothingProduct" instantiationLevel="1" name="material" type="String"/>
+    <Attribute class="GarmentCategory" instantiationLevel="1" name="sizeOptions" type="Enumeration::SizeEnum"/>
+    <Attribute class="GarmentCategory" instantiationLevel="0" name="size" type="Enumeration::SizeEnum"/>
+    <Attribute class="GarmentCategory" instantiationLevel="0" name="color" type="Enumeration::ColorEnum"/>
+    <Attribute class="FootwearProduct" instantiationLevel="0" name="shoeSize" type="Integer"/>
+
+    <!-- SLOT VALUES -->
+    <SlotValue class="ClothingProduct" attributeName="hasWarrantyYears" value="2"/>
+    <SlotValue class="FootwearProduct" attributeName="hasWarrantyYears" value="1"/>
+    <SlotValue class="TShirt" attributeName="material" value="Cotton"/>
+    <SlotValue class="Jeans" attributeName="material" value="Denim"/>
+    <SlotValue class="TShirt" attributeName="sizeOptions" value="Enumeration::SizeEnum::S"/>
+    <SlotValue class="Jeans" attributeName="sizeOptions" value="Enumeration::SizeEnum::M"/>
+    <SlotValue class="BlueTShirt001" attributeName="size" value="Enumeration::SizeEnum::S"/>
+    <SlotValue class="BlueTShirt001" attributeName="color" value="Enumeration::ColorEnum::Blue"/>
+    <SlotValue class="Levis501" attributeName="size" value="Enumeration::SizeEnum::M"/>
+    <SlotValue class="Levis501" attributeName="color" value="Enumeration::ColorEnum::Black"/>
+    <SlotValue class="NikeAirMax" attributeName="shoeSize" value="42"/>
+
+    <!-- ASSOCIATIONS -->
+    <Association
+        source="ProductCategory"
+        target="ProductCategory"
+        associationName="relatedTo"
+        accessSourceFromTargetName="targetType"
+        accessTargetFromSourceName="relatedType"
+        instantiationLevelSource="2"
+        instantiationLevelTarget="2"
+        minMultiplicitySourceToTarget="0"
+        maxMultiplicitySourceToTarget="-1"
+        minMultiplicityTargetToSource="0"
+        maxMultiplicityTargetToSource="-1"
+    />
+
+    <Association
+        source="GarmentCategory"
+        target="FootwearProduct"
+        associationName="styledWith"
+        accessSourceFromTargetName="shoes"
+        accessTargetFromSourceName="clothes"
+        instantiationLevelSource="1"
+        instantiationLevelTarget="1"
+        minMultiplicitySourceToTarget="0"
+        maxMultiplicitySourceToTarget="-1"
+        minMultiplicityTargetToSource="0"
+        maxMultiplicityTargetToSource="-1"
+    />
+
+    <Association
+        source="TShirt"
+        target="Jeans"
+        associationName="soldTogether"
+        accessSourceFromTargetName="soldWithJeans"
+        accessTargetFromSourceName="soldWithShirt"
+        instantiationLevelSource="0"
+        instantiationLevelTarget="0"
+        minMultiplicitySourceToTarget="0"
+        maxMultiplicitySourceToTarget="-1"
+        minMultiplicityTargetToSource="0"
+        maxMultiplicityTargetToSource="1"
+    />
+
+    <!-- LINKS -->
+    <Link source="TShirt" target="Jeans" accessName="soldWithJeans"/>
+
+</MultiLevelModel>

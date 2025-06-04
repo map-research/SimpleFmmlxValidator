@@ -22,8 +22,8 @@ class FMMLxValidatorApp():
         #icon_path = os.path.join(os.path.dirname(__file__), "mosaic32.ico")
         #self.root.iconbitmap(icon_path)
 
-        width = 720
-        height = 400
+        width = 840
+        height = 500
         self.root.update_idletasks()
         x = (self.root.winfo_screenwidth() // 2) - (width // 2)
         y = (self.root.winfo_screenheight() // 2) - (height // 2)
@@ -55,7 +55,7 @@ class FMMLxValidatorApp():
                                           text_color_disabled="gray")
         self.btn_validate.pack(side="left", padx=5)
 
-        self.text_validation = ctk.CTkTextbox(root, height=120, width=680, state="disabled", border_width=1,
+        self.text_validation = ctk.CTkTextbox(root, height=220, width=800, state="disabled", border_width=1,
                                               border_color="#203864")
         self.text_validation.pack(pady=10)
 
@@ -63,7 +63,7 @@ class FMMLxValidatorApp():
                                       corner_radius=20, fg_color="#D3D3D3", text_color_disabled="gray")
         self.btn_copy.pack(pady=5)
 
-        self.label_version = ctk.CTkLabel(root, text="version 1.0, build date: Feb 26, 2025", font=("Arial", 8),
+        self.label_version = ctk.CTkLabel(root, text="version 2.0, build date: Jun 04, 2025", font=("Arial", 8),
                                           text_color="#203864")
         self.label_version.place(relx=1.0, rely=1.0, anchor="se", x=-10, y=-10)
 
@@ -117,8 +117,9 @@ class FMMLxValidatorApp():
 
     def _get_validation_message(self) -> str:
         validator = EasyFmmlxValidator(self.is_standard, self.file_path)
-        validator.perform_all_integrity_checks() # only shown in console
-        return (f"The multi-level model is {validator.get_is_valid_message()} \n"
+        if not self.is_standard:
+            validator.perform_all_integrity_checks() # only shown in console
+        return (f"The multi-level model is {validator.get_is_valid_message()} \n\n"
                 f"{validator.get_error_messages()}")
 
     def copy_message(self):
