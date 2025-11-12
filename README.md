@@ -4,7 +4,7 @@ The latest version of the XModelerML can be downloaded at <a href="https://www.w
 
 FMMLx models are saved as XML files whose main purpose has always been to support persistence of models. 
 This standard FMMLx XML notation can be overwhelming. Among others, it includes layouting information and many unintelligble XML element or attribute names.
-Studies have shown this standard FMMLx representation to be problematic for use by large language models (Maier & Kadziolka 2026).
+Studies have shown this standard FMMLx representation to be problematic for use by large language models (<a href="https://doi.org/10.1007/978-3-032-08620-4_8" target="_blank">Maier & Kadziolka 2026</a>).
 
 For this reason, we developed a simplified FMMLx XML notation that only focuses on essential information. 
 This XML notation, supplemented with a set of integrity constraints, proved better suited for experiments with large language models.
